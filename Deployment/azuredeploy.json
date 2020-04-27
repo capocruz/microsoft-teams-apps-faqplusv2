@@ -155,7 +155,7 @@
     "configAppUrl": "[concat('https://', variables('configAppName'), '.azurewebsites.net')]",
     "configAppInsightsName": "[concat(parameters('baseResourceName'), '-config')]",
     "qnaMakerAccountName": "[parameters('baseResourceName')]",
-    "qnaMakerLocation": "westus",
+    "qnaMakerLocation": "[resourceGroup().location]",
     "qnaMakerAppServiceName": "[concat(parameters('baseResourceName'), '-qnamaker')]",
     "qnaMakerAppInsightsName": "[concat(parameters('baseResourceName'), '-qnamaker')]",
     "qnaMakerSkuValue": "[substring(parameters('qnaMakerSku'), 0, 2)]",
@@ -285,7 +285,7 @@
             },
             {
               "name": "QnAMakerApiEndpointUrl",
-              "value": "https://westus.api.cognitive.microsoft.com"
+              "value": "https://[resourceGroup().location].api.cognitive.microsoft.com"
             },
             {
               "name": "ApplicationInsightsLogLevel",
@@ -560,7 +560,7 @@
             },
             {
               "name": "QnAMakerApiUrl",
-              "value": "https://westus.api.cognitive.microsoft.com"
+              "value": "https://[resourceGroup().location].api.cognitive.microsoft.com"
             },
             {
               "name": "QnAMakerSubscriptionKey",
