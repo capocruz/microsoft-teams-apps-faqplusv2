@@ -285,7 +285,7 @@
             },
             {
               "name": "QnAMakerApiEndpointUrl",
-              "value": "https://[resourceGroup().location].api.cognitive.microsoft.com"
+              "value": "[concat('https://',[resourceGroup().location],'.api.cognitive.microsoft.com')]"
             },
             {
               "name": "ApplicationInsightsLogLevel",
@@ -560,7 +560,7 @@
             },
             {
               "name": "QnAMakerApiUrl",
-              "value": "https://[resourceGroup().location].api.cognitive.microsoft.com"
+              "value": "[concat('https://',[resourceGroup().location],'.api.cognitive.microsoft.com')]"
             },
             {
               "name": "QnAMakerSubscriptionKey",
